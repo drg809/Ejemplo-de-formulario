@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Valid_Total</title>
+		<script type="text/javascript" src="Valid_Total.js"></script>
+	</head>
+	<body bgcolor=white>
+		<h1 align="center">POR FAVOR RELLENE TODOS LOS CAMPOS PARA SER ENVIADOS</h1>
+		<form name="formulario" method="POST" action="mailto:drg809@gmail.com">
+			<table align="center">
+			
+				<tr>
+					<td align="left"><b>DNI:</b></td>
+					<td align="left"><input type="text" name="dni" id="dni" size="23" maxlength="9" onblur=validarDNI(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Nombre:</b></td>
+					<td align="left"><input type="text" name="nombre" id="nombre" size="23" onblur=validarnombre(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Apellidos:</b></td>
+					<td align="left"><input type="text" name="apellidos" id="apellidos" size="23" onblur=validarapellidos(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Fecha de Nacimiento:</b></td>
+					<td align="left"><input type="date" name="fecha" id="fecha" size="23" onblur=validarfecha(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Domicilio:</b></td>
+					<td align="left"><input type="text" name="domicilio" id="domicilio" size="23" onblur=validardomicilio(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>C&oacute;digo postal:</b></td>
+					<td align="left"><input type="text" name="CP" id="CP" size="23" onblur=validarCP(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Provincia:</b></td>
+					<td align="left"><input type="text" name="provincia" id="provincia" size="23" onblur=validarprovincia(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Tel&eacute;fono:</b></td>
+					<td align="left"><input type="text" name="telf" id="telf" size="23" onblur=validartelf(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Correo Electr&oacute;nico:</b></td>
+					<td align="left"><input type="text" name="email" id="email" size="23" onblur=validaremail(this.value)></td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Sexo:</b></td>
+					<td align="left">
+						<INPUT TYPE="radio" name="sexo" id="hombre"  onClick=hom()> Hombre
+						<INPUT TYPE="radio" name="sexo" id="mujer" onclick=muj()> Mujer
+					</td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Estado Civil:</b></td>
+					<td align="left">
+						<select name="estado">
+							<option value="soltero">Soltero</option>
+							<option value="casado">Casado</option>
+							<option value="divorciado">Divorciado</option>
+							<option value="viudo">Viudo</option>
+							<option value="arrejuntado">Arrejuntado</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Idiomas:</b></td>
+					<td align="left">
+						<input type="checkbox" id="spa" onClick=span()/>Espa&ntilde;ol 
+						<input type="checkbox" id="fr" onClick=fran()/>Franc&eacute;s 
+						<input type="checkbox" id="eng" onClick=ing()/>Ingl&eacute;s 
+						<input type="checkbox" id="ger" onClick=ale()/>Alem&aacute;n    
+					</td>
+				</tr>
+
+				<tr>
+					<td align="left"><b>Comentarios Personales:</td>
+					<td align="left"><input type="textarea" name="coment_per" size="23" onblur="cv()"/></td>
+				</tr>
+				
+				<tr>
+					<td align="left"><b>Cuenta corriente:</b></td>
+					<td align="left">
+						<INPUT TYPE="text" id="banco" MAXLENGTH="4" SIZE="4">
+						<INPUT TYPE="text" id="sucursal" MAXLENGTH="4" SIZE="4">
+						<INPUT TYPE="text" id="dc" MAXLENGTH="2" SIZE="2">
+						<INPUT TYPE="text" id="cuenta" MAXLENGTH="10" SIZE="10" onblur=validarb() onchange=validarb()>
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="left"><b>Hora del env&iacute;o:</b></td>
+					<td align="left"><input type="text" id="hora" onblur=validarhora()/></td>
+				</tr>
+				
+				<tr>
+					<td align="right"><input type="Submit" value="Enviar" /></td>
+					<td align="left"><input type="reset" name="reset" value="Borrar"/></td>
+				</tr>
+				
+			</table>
+		</form>
+	</body>
+</html>
